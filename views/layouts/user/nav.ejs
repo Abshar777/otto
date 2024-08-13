@@ -1,0 +1,50 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<header class="header-area transparent-bar section-padding-1">
+    <div class="container-fluid">
+        <div class="row align-items-center bg-white">
+            <!-- Left side with Home and Shop -->
+            <div class="col-xl-4 col-lg-4 d-flex justify-content-start">
+                <div class="main-menu menu-lh-1 main-menu-padding-1">
+                    <nav>
+                        <ul class="d-flex">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/shop">Shop</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Centered Logo -->
+            <div class="col-xl-4 col-lg-4 d-flex justify-content-center">
+                <div class="logo logo-width">
+                    <a href="/">
+                        <img src="/user/assets/images/logo/logo.png" alt="logo">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right side with Wishlist, Cart, Search, and Account -->
+            <div class="col-xl-4 col-lg-4 d-flex justify-content-end">
+                <div class="header-right-wrap header-right-flex">
+                    <div class="same-style header-wishlist">
+                        <a href="<%= locals.user ? '/wishlist' : '/login' %>"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="same-style cart-wrap">
+                        <a href="#" class="cart-active">
+                            <i class="dlicon shopping_bag-20"></i>
+                            <span class="count-style"></span>
+                        </a>
+                    </div>
+                    <div class="same-style header-search">
+                        <a class="search-active" href="#"><i class="dlicon ui-1_zoom"></i></a>
+                    </div>
+                    <div class="same-style header-off-canvas">
+                        <a href="<%= locals.user ? '/myaccount' : '/login' %>">
+                            <i class="far fa-user" style="font-size: 20px; color: black;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
